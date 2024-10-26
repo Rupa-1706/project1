@@ -1,0 +1,138 @@
+/* General styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+    background-color: #f4f4f4; /* Fallback color */
+}
+
+header {
+    background-color: #2980b9; /* Header color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #34495e; /* Sidebar background */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: white; /* Sidebar link color */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar a:hover {
+    background-color: #1abc9c; /* Hover effect */
+}
+
+.content {
+    margin-left: 220px; /* Leave space for sidebar */
+    padding: 20px;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    background-image: url('image3.jpg'); /* Add your image path here */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* About section */
+#about {
+    background-color: rgba(240, 248, 255, 0.8); /* Light blue with transparency */
+    color: #2c3e50; /* Darker color for text */
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Projects section */
+#projects {
+    background-color: rgba(249, 251, 231, 0.8); /* Light green with transparency */
+    color: #2c3e50; /* Darker color for text */
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.project {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Border for project cards */
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* GitHub section */
+#github {
+    background-color: rgba(232, 246, 243, 0.8); /* Light teal with transparency */
+    color: #2c3e50; /* Darker color for text */
+    animation: fadeIn 0.5s ease forwards; /* Animation for entry */
+}
+
+/* Contact section */
+#contact {
+    background-color: rgba(253, 248, 228, 0.8); /* Light yellow with transparency */
+    color: #2c3e50; /* Darker color for text */
+    animation: fadeIn 0.5s ease forwards; /* Animation for entry */
+}
+
+/* Footer styles */
+footer {
+    background-color: #2980b9; /* Footer color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static; /* Sidebar stacks on top */
+        width: 100%;
+    }
+    .content {
+        margin-left: 0; /* Full width */
+    }
+}
